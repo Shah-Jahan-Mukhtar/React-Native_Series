@@ -1,60 +1,80 @@
 import React from "react";
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 
 const App = () => {
-
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View>
-        <Text style={styles.container}> Hello world </Text>
-        <Text style={styles2.container}>This  is new world</Text>
+    <SafeAreaView style={{ top: 60 }}>
+      <View style={styles.container}>
+        <Text>Here are some boxes of different colors</Text>
+        <Text style={styles.text1}>Cyan #2aa198</Text>
+        <Text style={styles.text2}>Blue #268bd2</Text>
+        <Text style={styles.text3}>Magenta #d33682</Text>
+        <Text style={styles.text4}>Orange #cb4b16</Text>
       </View>
     </SafeAreaView>
-
-
-  )
+  );
 };
 
 const styles = StyleSheet.create({
   container: {
-    // paddingTop: 30,
-    // paddingBottom: 30,
-    // paddingRight: 0,
-    // paddingLeft: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    backgroundColor: 'lime',
-    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
-  safeArea:{
-    flex:2
-  }
-});
-
-
-const styles2 = StyleSheet.create({
-  container: {
-    //  paddingVertical:50,
-    //   paddingHorizontal:50,
-
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign:'center',
-    // borderColor: '#14AAF5',
-    // borderWidth: 2,
-    
-
-
-
+  text1: {
+    backgroundColor: "#2aa198",
+    width: 320,
+    paddingVertical: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: 10,
+    color: "white",
+    borderRadius: 5,
   },
-  safeArea:{
-    flex:1,
-  }
+  text2: {
+    backgroundColor: "#268bd2",
+    width: 320,
+    paddingVertical: 10,
+
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: 10,
+    color: "white",
+    borderRadius: 5,
+  },
+  text3: {
+    backgroundColor: "#d33682",
+    width: 320,
+    paddingVertical: 10,
+
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: 10,
+    color: "white",
+    borderRadius: 5,
+  },
+  text4: {
+    backgroundColor: "#cb4b16",
+    width: 320,
+    paddingVertical: 10,
+
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: 10,
+    color: "white",
+    borderRadius: 5,
+  },
+
+  //   lime: {
+  //     backgroundColor: "lime",
+  //   },
+  //   safeArea: {
+  //     top: 25,
+  //     flex: 1,
+  //   },
 });
-
-
 
 export default App;
