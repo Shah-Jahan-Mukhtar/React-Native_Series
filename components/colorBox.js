@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
     padding: 10,
 
     marginTop: 10,
-    marginBottom: 10,
+
     width: 320,
 
-    borderRadius: 3,
+    borderRadius: 5 ,
   },
   orange: {
     backgroundColor: "#DAEE01",
