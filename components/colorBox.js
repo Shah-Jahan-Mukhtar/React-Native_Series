@@ -3,9 +3,12 @@ import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const ColorBox = ({ colorName, hexCode }) => {
+  const boxColor = {
+    backgroundColor: hexCode,
+  };
   return (
     <SafeAreaView>
-      <View style={styles.box}>
+      <View style={[styles.box, boxColor]}>
         <Text style={styles.boxText}>
           {colorName}:{hexCode}
         </Text>
@@ -21,20 +24,18 @@ const styles = StyleSheet.create({
     textAlign: "center",
     padding: 10,
 
-    marginLeft: 20,
     marginTop: 10,
     marginBottom: 10,
     width: 320,
 
     borderRadius: 3,
+  },
+  orange: {
     backgroundColor: "#DAEE01",
   },
-  //   orange: {
-  //     backgroundColor: "#DAEE01",
-  //   },
   boxText: {
     fontWeight: "bold",
-    color: "black",
+    color: "white",
   },
 });
 
