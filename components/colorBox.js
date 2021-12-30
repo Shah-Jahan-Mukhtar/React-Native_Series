@@ -2,18 +2,22 @@ import React from "react";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
-const ColorBox = ({ colorName, hexCode }) => {
+const ColorBox = (props) => {
   const boxColor = {
-    backgroundColor: hexCode,
+    backgroundColor: props.hexCode,
+  };
+  const textStyle = {
+    color:
+      parseInt(props.hexCode.replace("#", ""), 16) > 0xffffff / 1.1
+        ? "black"
+        : "white",
   };
   return (
-    <SafeAreaView>
-      <View style={[styles.box, boxColor]}>
-        <Text style={styles.boxText}>
-          {colorName}:{hexCode}
-        </Text>
-      </View>
-    </SafeAreaView>
+    <View style={[styles.box, boxColor]}>
+      <Text style={[styles.boxText, textStyle]}>
+        {props.colorName}:{props.hexCode}
+      </Text>
+    </View>
   );
 };
 
@@ -28,7 +32,7 @@ const styles = StyleSheet.create({
 
     width: 320,
 
-    borderRadius: 5 ,
+    borderRadius: 5,
   },
   orange: {
     backgroundColor: "#DAEE01",
