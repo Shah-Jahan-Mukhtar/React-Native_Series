@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const ColorBox = (props) => {
@@ -15,7 +15,7 @@ const ColorBox = (props) => {
   return (
     <View style={[styles.box, boxColor]}>
       <Text style={[styles.boxText, textStyle]}>
-        {props.colorName}:{props.hexCode}
+        {props.colorName} :{props.hexCode}
       </Text>
     </View>
   );
@@ -25,21 +25,22 @@ const styles = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: "center",
-    textAlign: "center",
-    padding: 10,
+    padding: 5,
 
-    marginTop: 10,
+    marginBottom: 6,
 
     width: 320,
 
-    borderRadius: 5,
+    borderRadius: 3,
+    backgroundColor: "teal",
   },
-  orange: {
-    backgroundColor: "#DAEE01",
-  },
+  // orange: {
+  //   backgroundColor: "#DAEE01",
+  // },
   boxText: {
     fontWeight: "bold",
     color: "white",
+    fontSize: 18,
   },
 });
 
