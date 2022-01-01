@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 
     borderRadius: 3,
     backgroundColor: "teal",
- 
+  },
   boxText: {
     fontWeight: "bold",
     color: "white",
